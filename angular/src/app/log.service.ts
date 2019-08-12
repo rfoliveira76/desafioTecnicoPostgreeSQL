@@ -12,7 +12,7 @@ export class LogService {
 
     formdata.append('file', file);
 
-    const req = new HttpRequest('POST', '/upload', formdata, {
+    const req = new HttpRequest('POST', '/save', formdata, {
       reportProgress: true,
       responseType: 'text'
     });
