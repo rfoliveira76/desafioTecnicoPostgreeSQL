@@ -12,7 +12,7 @@ export class LogService {
 
     formdata.append('file', file);
 
-    const req = new HttpRequest('POST', '/post', formdata, {
+    const req = new HttpRequest('POST', '/upload', formdata, {
       reportProgress: true,
       responseType: 'text'
     });
@@ -21,6 +21,6 @@ export class LogService {
   }
 
   getFiles(): Observable<any> {
-    return this.http.get('/getallfiles');
+    return this.http.get('/findAll');
   }
 }
